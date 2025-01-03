@@ -1,0 +1,7 @@
+[ROCm-latest]
+name=ROC-latest
+baseurl=https://repo.radeon.com/rocm/yum/latest/main
+enabled=1
+priority=50
+gpgcheck=1
+gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
