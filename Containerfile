@@ -52,6 +52,10 @@ COPY build.sh /tmp/build.sh
 COPY get_repos.sh /tmp/get_repos.sh
 
 RUN mkdir -p /var/lib/alternatives && \
+    /tmp/get_repos.sh && \
+    ostree container commit
+
+RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
 ## NOTES:
