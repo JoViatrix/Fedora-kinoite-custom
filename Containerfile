@@ -48,10 +48,11 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
-COPY local_repos /tmp/local_repos
 COPY build.sh /tmp/build.sh
 COPY winehq.sh /tmp/winehq.sh
-COPY get_repos.sh /tmp/get_repos.sh
+COPY cdemu.sh /tmp/cdemu.sh
+COPY rocm.sh /tmp/rocm.sh
+COPY xone.sh /tmp/xone.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
