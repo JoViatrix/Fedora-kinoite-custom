@@ -70,7 +70,7 @@ dnf5 install -y zerotier-one
 # Install additonal codecs multimedia group
 
 dnf5 group install -y multimedia
-dnf5 install -y libavcodec-freeworld
+# dnf5 install -y libavcodec-freeworld
 dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 
 # install misc packages
