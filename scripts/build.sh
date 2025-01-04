@@ -33,6 +33,10 @@ dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-conf
 
 /tmp/xone.sh
 
+# Install xpadneo
+
+/tmp/xpadneo.sh
+
 # Install snapd
 
 dnf5 install -y snapd
