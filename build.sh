@@ -22,6 +22,8 @@ RELEASE="$(rpm -E %fedora)"
 # systemctl enable podman.socket
 /tmp/get_repos.sh
 dnf5 install -y kernel-devel-matched
+
+mkdir -p /opt/wine-staging/bin
 dnf5 install -y winehq-staging snapd # nextcloud-client-dolphin
 
 # Install virt-manager and qemu-kvm
@@ -29,3 +31,14 @@ dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-conf
 
 # Install cdemu module and gui
 dnf5 install -y install cdemu-client cdemu-daemon gcdemu
+
+# Install prorietary rocm hip and opencl
+
+dnf5 install -y rocm-hip rocm-opencl
+
+# Installing xone and its firmware
+
+dnf install -y xone lpf-xone-firmware
+lpf approve xone-firmware
+lpf build xone-firmware
+lpf install -y xone-firmware
