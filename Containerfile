@@ -50,6 +50,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 COPY local_repos /tmp/local_repos
 COPY build.sh /tmp/build.sh
+COPY winehq.sh /tmp/winehq.sh
 COPY get_repos.sh /tmp/get_repos.sh
 
 RUN mkdir -p /var/lib/alternatives && \
