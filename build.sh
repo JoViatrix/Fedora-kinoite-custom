@@ -21,11 +21,11 @@ RELEASE="$(rpm -E %fedora)"
 #### Example for enabling a System Unit File
 # systemctl enable podman.socket
 /tmp/get_repos.sh
-rpm-ostree install kernel-devel-matched
-rpm-ostree install winehq-staging snapd # nextcloud-client-dolphin
+dnf5 install -y kernel-devel-matched
+dnf5 install -y winehq-staging snapd # nextcloud-client-dolphin
 
 # Install virt-manager and qemu-kvm
-rpm-ostree install virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network
+dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network
 
 # Install cdemu module and gui
-rpm-ostree install cdemu-client cdemu-daemon gcdemu
+dnf5 install -y install cdemu-client cdemu-daemon gcdemu
