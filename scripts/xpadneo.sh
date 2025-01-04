@@ -8,7 +8,7 @@ dnf5 -y copr enable atim/xpadneo
 
 dnf5 install -y xpadneo
 
-akmods --force --kmod xpadneo
+akmods --force --kernels "$(rpm -q kernel)" --kmod xpadneo
 
 cat >/etc/modules-load.d/xpadneo.conf <<EOF
 hid_xpadneo
