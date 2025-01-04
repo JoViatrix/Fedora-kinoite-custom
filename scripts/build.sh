@@ -65,4 +65,4 @@ dnf5 install -y steam mangohud gamescope
 
 # install misc packages
 
-dnf5 install -y aoetools btrbk corectrl zerotier-one waydroid
+dnf5 install -y aoetools btrbk corectrl waydroid
