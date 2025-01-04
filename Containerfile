@@ -52,7 +52,7 @@ COPY local_repos /tmp/local_repos
 COPY build.sh /tmp/build.sh
 COPY get_repos.sh /tmp/get_repos.sh
 
-RUN mkdir -p /var/lib/alternatives && \
+RUN mkdir -p /var/lib/alternatives /opt/wine-staging/bin && \
     /tmp/build.sh && \
     ostree container commit
 ## NOTES:
