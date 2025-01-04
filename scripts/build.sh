@@ -63,6 +63,10 @@ dnf5 install -y nextcloud-client-dolphin
 
 dnf5 install -y steam mangohud gamescope
 
+# Install heroic
+
+./heroic.sh
+
 # Install zerotier-one
 dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$RELEASE.noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$RELEASE.noarch.rpm
 dnf5 install -y zerotier-one
@@ -75,4 +79,4 @@ dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 
 # install misc packages
 
-dnf5 install -y aoetools btrbk corectrl waydroid ddrescue
+dnf5 install -y aoetools btrbk corectrl waydroid ddrescue obs-studio
