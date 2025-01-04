@@ -22,6 +22,10 @@ dnf5 install -y kernel-devel-matched
 # Install wine staging from winehq.org
 ./winehq.sh
 
+# Install dosbox
+
+dnf5 install dosbox
+
 # Install virt-manager and qemu-kvm
 dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network
 
@@ -43,6 +47,10 @@ dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-conf
 
 ./k3b.sh
 
+# Install sunshine
+
+./sunshine.sh
+
 # Install snapd
 
 dnf5 install -y snapd
@@ -54,3 +62,7 @@ dnf5 install -y nextcloud-client-dolphin
 # Install steam and tools
 
 dnf5 install -y steam mangohud gamescope
+
+# install misc packages
+
+dnf5 install -y aoetools btrbk corectrl zerotier-one waydroid
