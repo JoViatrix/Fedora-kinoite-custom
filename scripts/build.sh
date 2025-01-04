@@ -15,27 +15,33 @@ RELEASE="$(rpm -E %fedora)"
 #### Example for enabling a System Unit File
 # systemctl enable podman.socket
 
+cd "$(dirname "$0")"
+
 dnf5 install -y kernel-devel-matched
 
 # Install wine staging from winehq.org
-/tmp/winehq.sh
+./winehq.sh
 
 # Install virt-manager and qemu-kvm
 dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network
 
 # Install cdemu module and gui
-/tmp/cdemu.sh
+./cdemu.sh
 
 # Install prorietary rocm hip and opencl from AMD
-/tmp/rocm.sh
+./rocm.sh
 
 # Installing xone and its firmware
 
-/tmp/xone.sh
+./xone.sh
 
 # Install xpadneo
 
-/tmp/xpadneo.sh
+./xpadneo.sh
+
+# Install k3b
+
+./k3b.sh
 
 # Install snapd
 
