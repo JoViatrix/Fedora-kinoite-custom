@@ -14,7 +14,7 @@ RELEASE="$(rpm -E %fedora)"
 
 #### Example for enabling a System Unit File
 # systemctl enable podman.socket
-/tmp/get_repos.sh
+
 dnf5 install -y kernel-devel-matched
 
 # Install wine staging from winehq.org
