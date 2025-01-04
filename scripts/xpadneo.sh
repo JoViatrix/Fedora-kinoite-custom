@@ -6,7 +6,7 @@ echo "Installing xpadneo"
 
 dnf5 -y copr enable atim/xpadneo
 
-rpm-ostree install --idempotent xpadneo
+dnf5 install -y xpadneo
 
 cat >/etc/modules-load.d/xpadneo.conf <<EOF
 hid_xpadneo

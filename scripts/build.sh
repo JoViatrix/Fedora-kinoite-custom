@@ -80,3 +80,7 @@ dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 # install misc packages
 
 dnf5 install -y aoetools btrbk corectrl waydroid ddrescue obs-studio piper
+
+# rebuild modules
+
+akmodsbuild
