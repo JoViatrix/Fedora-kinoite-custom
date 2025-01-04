@@ -17,7 +17,7 @@ RELEASE="$(rpm -E %fedora)"
 
 cd "$(dirname "$0")"
 
-rpm-ostree install --idempotent kernel-devel-matched
+dnf5 install -y kernel-devel-matched
 
 # Install wine staging from winehq.org
 ./winehq.sh
