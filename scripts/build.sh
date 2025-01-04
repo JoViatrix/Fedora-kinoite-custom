@@ -24,7 +24,7 @@ dnf5 install -y kernel-devel-matched
 
 # Install dosbox
 
-dnf5 install dosbox
+dnf5 install -y dosbox
 
 # Install virt-manager and qemu-kvm
 dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network
