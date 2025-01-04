@@ -63,6 +63,18 @@ dnf5 install -y nextcloud-client-dolphin
 
 dnf5 install -y steam mangohud gamescope
 
+# swap mesa libs
+
+dnf5 swap -y mesa-va-drivers mesa-va-drivers-freeworld
+dnf5 swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
+dnf5 swap -y mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
+dnf5 swap -y mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
+
+# Install additonal codecs multimedia group
+
+dnf5 group install -y multimedia
+dnf5 install -y libavcodec-freeworld
+
 # install misc packages
 
-dnf5 install -y aoetools btrbk corectrl waydroid
+dnf5 install -y aoetools btrbk corectrl waydroid ddrescue
