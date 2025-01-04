@@ -71,6 +71,9 @@ dnf5 swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
 dnf5 swap -y mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
 dnf5 swap -y mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
 
+# Install zerotier-one
+
+dnf5 install -y zerotier-one
 
 # Install additonal codecs multimedia group
 
