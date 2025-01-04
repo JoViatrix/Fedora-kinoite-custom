@@ -17,7 +17,7 @@ RELEASE="$(rpm -E %fedora)"
 
 cd "$(dirname "$0")"
 
-dnf5 install -y kernel-devel-matched
+rpm-ostree install --idempotent kernel-devel-matched
 
 # Install wine staging from winehq.org
 ./winehq.sh
@@ -79,4 +79,4 @@ dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 
 # install misc packages
 
-dnf5 install -y aoetools btrbk corectrl waydroid ddrescue obs-studio
+dnf5 install -y aoetools btrbk corectrl waydroid ddrescue obs-studio piper
