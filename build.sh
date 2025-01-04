@@ -20,6 +20,6 @@ RELEASE="$(rpm -E %fedora)"
 
 #### Example for enabling a System Unit File
 # systemctl enable podman.socket
-
+/tmp/get_repos.sh
 rpm-ostree install kernel-devel --reboot
 rpm-ostree install winehq-staging cdemu-client cdemu-daemon gcdemu snapd virt-manager
