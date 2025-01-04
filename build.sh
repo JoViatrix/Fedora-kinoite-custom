@@ -20,7 +20,7 @@ RELEASE="$(rpm -E %fedora)"
 
 #### Example for enabling a System Unit File
 # systemctl enable podman.socket
-/tmp/get_repos.s
+/tmp/get_repos.sh
 rpm-ostree install kernel-devel-matched
 rpm-ostree install winehq-staging snapd nextcloud-client-dolphin
 
