@@ -47,4 +47,10 @@ dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-conf
 
 dnf5 install -y snapd
 
+# Install Nextcloud client
+
 dnf5 install -y nextcloud-client-dolphin
+
+# Install steam and tools
+
+dnf5 install -y steam mangohud gamescope
