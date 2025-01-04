@@ -63,20 +63,13 @@ dnf5 install -y nextcloud-client-dolphin
 
 dnf5 install -y steam mangohud gamescope
 
-# swap mesa libs
-
-dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$RELEASE.noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$RELEASE.noarch.rpm
-dnf5 swap -y mesa-va-drivers mesa-va-drivers-freeworld
-dnf5 swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld
-dnf5 swap -y mesa-va-drivers.i686 mesa-va-drivers-freeworld.i686
-dnf5 swap -y mesa-vdpau-drivers.i686 mesa-vdpau-drivers-freeworld.i686
-
 # Install zerotier-one
 
 dnf5 install -y zerotier-one
 
 # Install additonal codecs multimedia group
 
+dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$RELEASE.noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$RELEASE.noarch.rpm
 dnf5 group install -y multimedia
 dnf5 install -y libavcodec-freeworld
 dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
