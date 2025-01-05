@@ -6,7 +6,7 @@ echo "Installing xpadneo"
 
 dnf5 -y copr enable atim/xpadneo
 
-dnf5 install -y xpadneo
+dnf5 install -y xpadneo kmod-xpadneo
 
 KERNEL_SUFFIX=""
 KERNEL="$(rpm -qa | grep -P 'kernel-(|'"$KERNEL_SUFFIX"'-)(\d+\.\d+\.\d+)' | sed -E 's/kernel-(|'"$KERNEL_SUFFIX"'-)//')"
