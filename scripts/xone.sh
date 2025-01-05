@@ -18,7 +18,7 @@ tar -xvzf /tmp/akmods/"$AKMODS_TARGZ" -C /tmp/
 dnf5 install -y xone /tmp/rpms/kmods/*xone*.rpm
 
 cat >/usr/lib/tmpfiles.d/xone_firmware.conf <<EOF
-L /lib/firmware/xow_dongle.bin - - - - /var/lib/firmware/xow_dongle.bin
+L /lib/firmware/xow_dongle.bin - - - - ../var/lib/firmware/xow_dongle.bin
 EOF
 
 cp ./firmware.sh /usr/bin/xone-get-firmware.sh

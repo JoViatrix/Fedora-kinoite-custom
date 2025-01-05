@@ -10,7 +10,7 @@ mkdir -p /var/opt
 dnf5 install -y winehq-staging
 mv /var/opt/wine-staging /usr/lib/opt/wine-staging
 cat >/usr/lib/tmpfiles.d/winehq.conf <<EOF
-L /opt/wine-staging - - - - /usr/lib/opt/wine-staging
+L /opt/wine-staging - - - - ../usr/lib/opt/wine-staging
 EOF
 
 rm -f /etc/yum.repos.d/winehq.repo

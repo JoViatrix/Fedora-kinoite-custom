@@ -19,9 +19,9 @@ cd "$(dirname "$0")"
 
 dnf5 install -y kernel-devel-matched
 
-# Uninstall firefox
+# Uninstall packages
 
-dnf5 remove -y firefox firefox-langpacks
+dnf5 remove -y firefox firefox-langpacks kate
 
 # Install wine staging from winehq.org
 ./winehq.sh
