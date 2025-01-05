@@ -19,6 +19,10 @@ cd "$(dirname "$0")"
 
 dnf5 install -y kernel-devel-matched
 
+# Uninstall firefox
+
+dnf5 remove -y firefox firefox-langpacks
+
 # Install wine staging from winehq.org
 ./winehq.sh
 
@@ -53,7 +57,7 @@ dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-conf
 
 # Install snapd
 
-dnf5 install -y snapd
+./snapd.sh
 
 # Install Nextcloud client
 
@@ -77,6 +81,10 @@ dnf5 group install -y multimedia
 # dnf5 install -y libavcodec-freeworld
 dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 
+# Install aoe
+
+./aoe.sh
+
 # install misc packages
 
-dnf5 install -y aoetools btrbk corectrl waydroid ddrescue obs-studio piper
+dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper
