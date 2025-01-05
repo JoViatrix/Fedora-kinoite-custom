@@ -21,7 +21,7 @@ cat >/usr/lib/tmpfiles.d/xone_firmware.conf <<EOF
 L /lib/firmware/xow_dongle.bin - - - - /var/lib/firmware/xow_dongle.bin
 EOF
 
-cat >/usr/local/bin/xone-get-firmware.sh <<EOF
+cat >/usr/bin/xone-get-firmware.sh <<EOF
 #!/usr/bin/env sh
 
 # This script is based on https://github.com/medusalix/xone/blob/master/install.sh. Thx to all contributors of xone!
@@ -62,6 +62,6 @@ mv FW_ACC_00U.bin /var/lib/firmware/xow_dongle.bin
 rm driver.cab
 EOF
 
-chmod +x /usr/local/bin/xone-get-firmware.sh
+chmod +x /usr/bin/xone-get-firmware.sh
 
 dnf5 copr remove sentry/xone
