@@ -17,6 +17,8 @@ RELEASE="$(rpm -E %fedora)"
 
 cd "$(dirname "$0")"
 
+dnf5 update -y
+
 dnf5 install -y kernel-devel-matched
 
 # Uninstall packages
