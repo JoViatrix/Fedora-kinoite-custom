@@ -75,16 +75,20 @@ dnf5 install -y steam mangohud gamescope
 dnf5 install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$RELEASE.noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$RELEASE.noarch.rpm
 dnf5 install -y zerotier-one
 
+# Install mesa freeworld drivers
+
+dnf5 install -y --allowerasing mesa-va-drivers-freeworld mesa-vdpau-drivers-freeworld mesa-va-drivers-freeworld.i686 mesa-vdpau-drivers-freeworld.i686
+
 # Install additonal codecs multimedia group
 
 dnf5 group install -y multimedia
-# dnf5 install -y libavcodec-freeworld
+
 dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 
 # Install aoe
 
 ./aoe.sh
 
-# install misc packages
+# Install misc packages
 
-dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper
+dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract
