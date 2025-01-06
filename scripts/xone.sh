@@ -4,8 +4,6 @@ set -ouex pipefail
 
 echo "Installing xone"
 
-dnf5 -y copr enable sentry/xone
-
 RELEASE="$(rpm -E %fedora)"
 KERNEL_FLAVOR=main
 KERNEL_SUFFIX=""
@@ -15,10 +13,4 @@ skopeo copy docker://ghcr.io/ublue-os/akmods:"${KERNEL_FLAVOR}"-"${RELEASE}"-"${
 AKMODS_TARGZ=$(jq -r '.layers[].digest' < /tmp/akmods/manifest.json | cut -d : -f 2)
 tar -xvzf /tmp/akmods/"$AKMODS_TARGZ" -C /tmp/
 
-dnf5 install -y xone /tmp/rpms/kmods/*xone*.rpm
-
-ln -s /var/lib/firmware/xow_dongle.bin /usr/lib/firmware/xow_dongle.bin
-
-cp ./firmware.sh /usr/bin/xone-get-firmware.sh
-
-dnf5 copr remove sentry/xone
+dnf5 install -y xone-kmod xone-kmod-common /tmp/rpms/kmods/*xone*.rpm
