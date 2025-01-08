@@ -9,7 +9,6 @@ cat << EOF > /etc/yum.repos.d/rocm.repo
 name=ROCm-latest
 baseurl=https://repo.radeon.com/rocm/rhel9/latest/main
 enabled=1
-priority=50
 gpgcheck=1
 gpgkey=https://repo.radeon.com/rocm/rocm.gpg.key
 EOF
