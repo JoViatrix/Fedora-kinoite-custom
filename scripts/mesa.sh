@@ -4,4 +4,4 @@ set -ouex pipefail
 
 echo "Updating mesa"
 
-dnf5 update -y mesa* vulkan*
+dnf5 update -y mesa-* vulkan-*
