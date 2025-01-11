@@ -88,3 +88,7 @@ dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 # Install misc packages
 
 dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract
+
+# Update mesa
+
+./mesa.sh
