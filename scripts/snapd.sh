@@ -4,7 +4,7 @@ set -ouex pipefail
 
 echo "Installing snapd"
 
-dnf5 install -y snapd
+rpm-ostree install snapd
 systemctl enable snapd
 
 # ln -s /var/lib/snapd/snap /snap
