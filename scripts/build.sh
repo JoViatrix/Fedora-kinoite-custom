@@ -19,6 +19,10 @@ cd "$(dirname "$0")"
 
 rpm-ostree install kernel-devel-matched
 
+# Install snapd
+
+./snapd.sh
+
 # Uninstall packages
 
 dnf5 remove -y firefox firefox-langpacks kate
@@ -54,10 +58,6 @@ dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-conf
 # Install sunshine
 
 ./sunshine.sh
-
-# Install snapd
-
-./snapd.sh
 
 # Install Nextcloud client
 
