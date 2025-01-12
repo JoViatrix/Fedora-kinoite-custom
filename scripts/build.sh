@@ -35,7 +35,6 @@ dnf5 remove -y firefox firefox-langpacks kate
 dnf5 install -y dosbox
 
 # Install virt-manager and qemu-kvm
-groupadd --system kvm
 dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network
 
 # Install cdemu module and gui
