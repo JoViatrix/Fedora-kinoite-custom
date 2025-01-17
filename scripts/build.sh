@@ -40,7 +40,7 @@ dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-conf
 # Install cdemu module and gui
 ./cdemu.sh
 
-# Install prorietary rocm hip and opencl from AMD
+# Install prorietary rocm hip and opencl for AMD
 ./rocm.sh
 
 # Installing xone and its firmware
@@ -92,3 +92,7 @@ dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract
 # Update mesa
 
 ./mesa.sh
+
+# Install Klassy theme
+
+./klassy.sh
