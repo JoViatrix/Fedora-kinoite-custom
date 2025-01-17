@@ -3,5 +3,5 @@
 set -ouex pipefail
 
 echo "Updating mesa"
+echo "Nothing to do"
 
-dnf5 update -y mesa-* vulkan-*
