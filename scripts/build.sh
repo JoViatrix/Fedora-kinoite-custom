@@ -19,16 +19,16 @@ cd "$(dirname "$0")"
 
 rpm-ostree install kernel-devel-matched
 
-# Install snapd
-
-./snapd.sh
-
 # Uninstall packages
 
-dnf5 remove -y firefox firefox-langpacks kate
+dnf5 remove -y kate
 
 # Install wine staging from winehq.org
 ./winehq.sh
+
+# Install bitwarden
+
+./bitwarden.sh
 
 # Install dosbox
 
@@ -87,7 +87,7 @@ dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 
 # Install misc packages
 
-dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract
+dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract thunderbird
 
 # Update mesa
 
