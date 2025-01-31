@@ -33,4 +33,4 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 </policyconfig>' > /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
 
 chown root:root /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
-chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
+# chcon system_u:object_r:usr_t:s0 /usr/share/polkit-1/actions/com.bitwarden.Bitwarden.policy
