@@ -87,7 +87,7 @@ dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 
 # Install misc packages
 
-dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract thunderbird
+dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract thunderbird firejail
 
 # Update mesa
 
