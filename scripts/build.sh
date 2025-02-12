@@ -35,7 +35,7 @@ dnf5 remove -y kate
 dnf5 install -y dosbox
 
 # Install virt-manager and qemu-kvm
-dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network
+dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network qemu-system-aarch64
 
 # Install cdemu module and gui
 ./cdemu.sh
