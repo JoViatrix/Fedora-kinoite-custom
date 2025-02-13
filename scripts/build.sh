@@ -35,7 +35,7 @@ dnf5 remove -y kate
 dnf5 install -y dosbox
 
 # Install virt-manager and qemu-kvm
-dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network qemu-system-aarch64
+dnf5 install -y virt-manager virt-install libvirt-daemon-kvm libvirt-daemon-config-network qemu-system-aarch64 qemu-system-riscv
 
 # Install cdemu module and gui
 ./cdemu.sh
@@ -87,7 +87,7 @@ dnf5 remove -y rpmfusion-free-release rpmfusion-nonfree-release
 
 # Install misc packages
 
-dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract thunderbird firejail
+dnf5 install -y btrbk corectrl waydroid ddrescue obs-studio piper innoextract thunderbird
 
 # Update mesa
 
