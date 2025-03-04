@@ -17,7 +17,7 @@ RELEASE="$(rpm -E %fedora)"
 
 cd "$(dirname "$0")"
 
-rpm-ostree install kernel-devel-matched
+# rpm-ostree install kernel-devel-matched
 
 # Uninstall packages
 
