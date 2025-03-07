@@ -21,7 +21,10 @@ cd "$(dirname "$0")"
 
 # Uninstall packages
 
-dnf5 remove -y kate
+dnf5 remove -y kate firefox firefox-langpacks
+
+# Install librewolf
+./librewolf.sh
 
 # Install wine staging from winehq.org
 ./winehq.sh
